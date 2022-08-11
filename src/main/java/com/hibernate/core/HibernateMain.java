@@ -13,7 +13,7 @@ public class HibernateMain {
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
-        Message message = new Message("Hello World");
+        Message message = new Message("Log4j Properties");
         session.save(message);
         tx.commit();
         session.close();
